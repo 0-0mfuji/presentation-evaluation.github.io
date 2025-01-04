@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<title>Presentation Evaluation Tool</title>
+	<style>
+		body {
+			background-color: #f0f0f0;
+		}
+
+		.container {
+			max-width: 800px;
+			margin-top: 20px;
+			padding: 20px;
+			background-color: #fff;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+
+		.btn-primary {
+			background-color: #3498db;
+			border-color: #2ecc71;
+			color: #fff;
+			padding: 10px 20px;
+			font-size: 16px;
+			font-weight: bold;
+			border-radius: 5px;
+			transition: background-color 0.3s ease;
+		}
+
+		.btn-primary:hover {
+			background-color: #2ecc71;
+		}
+
+		.button-container {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 10px;
+			margin-top: 20px;
+		}
+
+		#submit-btn {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			font-size: 18px;
+			font-weight: bold;
+			border: none;
+			cursor: pointer;
+			display: block;
+			margin: 0 auto;
+		}
+
+		#submit-modal-btn {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 15px 30px;
+			font-size: 20px;
+			font-weight: bold;
+			border-radius: 10px;
+			transition: background-color 0.3s ease;
+			border: none;
+			cursor: pointer;
+			margin-top: 20px;
+		}
+
+		.rules {
+			background-color: #f9f9f9;
+			padding: 20px;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Presentation Evaluation Tool</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#home">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#content">Content</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#delivery">Delivery</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#visuals">Visuals</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#results">Results</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#evaluation-history">Evaluation History</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<h1>Presentation Evaluation Tool</h1>
+		<p>The Presentation Evaluation Tool is a web-based application designed to help users assess and evaluate
+			presentations based on various criteria such as content, delivery, and visuals. The tool aims to provide a
+			standardized and objective method for evaluating presentations, making it easier for users to identify areas
+			of improvement and track progress over time.</p>
+		<div class="rules">
+			<h2>Evaluation Rules</h2>
+			<ol>
+				<li><strong>Content Quality (30 points):</strong> Evaluate the presentation's content based on its
+					relevance, accuracy, and overall quality. Consider the following:
+					<ul>
+						<li>Is the content well-organized and easy to follow?</li>
+						<li>Is the content relevant to the topic and audience?</li>
+						<li>Is the content accurate and up-to-date?</li>
+					</ul>
+				</li>
+				<li><strong>Delivery and Presentation Skills (30 points):</strong> Evaluate the presenter's delivery and
+					presentation skills based on their confidence, clarity, and engagement with the audience. Consider
+					the following:
+					<ul>
+						<li>Is the presenter confident and comfortable with the material?</li>
+						<li>Is the presenter clear and easy to understand?</li>
+						<li>Does the presenter engage with the audience and encourage participation?</li>
+					</ul>
+				</li>
+				<li><strong>Visual Aids and Supporting Materials (20 points):</strong> Evaluate the presentation's
+					visual aids and supporting materials based on their relevance, clarity, and overall effectiveness.
+					Consider the following:
+					<ul>
+						<li>Are the visual aids relevant and supportive of the content?</li>
+						<li>Are the visual aids clear and easy to read?</li>
+						<li>Do the visual aids enhance the presentation and engage the audience?</li>
+					</ul>
+				</li>
+				<li><strong>Engagement and Audience Interaction (20 points):</strong> Evaluate the presenter's ability
+					to engage with the audience and encourage participation. Consider the following:
+					<ul>
+						<li>Does the presenter encourage audience participation and engagement?</li>
+						<li>Does the presenter respond to audience questions and comments effectively?</li>
+						<li>Does the presenter adapt to the audience's needs and interests?</li>
+					</ul>
+				</li>
+			</ol>
+		</div>
+		<div id="home">
+			<h2>Welcome to the Presentation Evaluation Tool</h2>
+			<p>This tool allows you to evaluate presentations based on content, delivery, and visuals.</p>
+		</div>
+		<div id="content">
+			<h2>Content Evaluation</h2>
+			<p>Evaluate the content based on its relevance, accuracy, and overall quality.</p>
+			<form id="content-form">
+				<div class="mb-3">
+					<label for="content-score" class="form-label">Score (1-5)</label>
+					<select class="form-select" id="content-score" aria-label="Content score">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</div>
+				<div class="mb-3">
+					<label for="content-comments" class="form-label">Comments</label>
+					<textarea class="form-control" id="content-comments" rows="3"></textarea>
+				</div>
+			</form>
+		</div>
+		<div id="delivery">
+			<h2>Delivery Evaluation</h2>
+			<p>Evaluate the delivery based on the speaker's confidence, clarity, and engagement with the audience.</p>
+			<form id="delivery-form">
+				<div class="mb-3">
+					<label for="delivery-score" class="form-label">Score (1-5)</label>
+					<select class="form-select" id="delivery-score" aria-label="Delivery score">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</div>
+				<div class="mb-3">
+					<label for="delivery-comments" class="form-label">Comments</label>
+					<textarea class="form-control" id="delivery-comments" rows="3"></textarea>
+				</div>
+			</form>
+		</div>
+		<div id="visuals">
+			<h2>Visuals Evaluation</h2>
+			<p>Evaluate the visuals based on their relevance, clarity, and overall effectiveness in supporting the
+				presentation.</p>
+			<form id="visuals-form">
+				<div class="mb-3">
+					<label for="visuals-score" class="form-label">Score (1-5)</label>
+					<select class="form-select" id="visuals-score" aria-label="Visuals score">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</div>
+				<div class="mb-3">
+					<label for="visuals-comments" class="form-label">Comments</label>
+					<textarea class="form-control" id="visuals-comments" rows="3"></textarea>
+				</div>
+			</form>
+		</div>
+		<div id="results">
+			<h2>Results</h2>
+			<p id="results-text"></p>
+			<div class="button-container">
+				<button type="button" class="btn btn-primary" id="share-btn" style="display: none;">Share
+					Results</button>
+				<button type="button" class="btn btn-primary" id="print-btn" style="display: none;">Print
+					Results</button>
+				<button type="button" class="btn btn-primary" id="save-draft-btn">Save Draft</button>
+			</div>
+		</div>
+		<div id="evaluation-history">
+			<h2>Evaluation History</h2>
+			<ul id="evaluation-history-list"></ul>
+			<div class="button-container">
+				<button type="button" class="btn btn-primary" id="filter-evaluations-btn">Filter Evaluations</button>
+				<button type="button" class="btn btn-primary" id="delete-evaluations-btn">Delete Evaluations</button>
+				<button type="button" class="btn btn-primary" id="edit-evaluations-btn">Edit Evaluations</button>
+			</div>
+		</div>
+		<button type="button" class="btn" id="submit-modal-btn" data-bs-toggle="modal" data-bs-target="#submit-modal"
+			style="margin-top: 20px;">
+			Submit Evaluation
+		</button>
+		<div class="modal fade" id="submit-modal" tabindex="-1" aria-labelledby="submit-modal-label" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="submit-modal-label">Submit Evaluation</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						Are you sure you want to submit your evaluation?
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						<button type="button" id="submit-btn">Submit Evaluation</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="toast-container position-fixed bottom-0 end-0 p-3">
+			<div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+				data-bs-autohide="false">
+				<div class="toast-body">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+	<script>
+		const submitBtn = document.getElementById('submit-btn');
+		const resultsText = document.getElementById('results-text');
+		const shareBtn = document.getElementById('share-btn');
+		const printBtn = document.getElementById('print-btn');
+		const saveDraftBtn = document.getElementById('save-draft-btn');
+		const evaluationHistoryList = document.getElementById('evaluation-history-list');
+		const filterEvaluationsBtn = document.getElementById('filter-evaluations-btn');
+		const deleteEvaluationsBtn = document.getElementById('delete-evaluations-btn');
+		const editEvaluationsBtn = document.getElementById('edit-evaluations-btn');
+		let shareLink = '';
+		let evaluations = JSON.parse(localStorage.getItem('evaluations')) || [];
+
+		// Save draft functionality
+		saveDraftBtn.addEventListener('click', () => {
+			const contentScore = document.getElementById('content-score').value;
+			const contentComments = document.getElementById('content-comments').value;
+			const deliveryScore = document.getElementById('delivery-score').value;
+			const deliveryComments = document.getElementById('delivery-comments').value;
+			const visualsScore = document.getElementById('visuals-score').value;
+			const visualsComments = document.getElementById('visuals-comments').value;
+			const draft = {
+				contentScore,
+				contentComments,
+				deliveryScore,
+				deliveryComments,
+				visualsScore,
+				visualsComments
+			};
+			localStorage.setItem('draft', JSON.stringify(draft));
+			const liveToast = document.getElementById('liveToast');
+			const toastBody = liveToast.querySelector('.toast-body');
+			toastBody.innerText = 'Draft saved successfully';
+			const toast = new bootstrap.Toast(liveToast);
+			toast.show();
+		});
+
+		// Load saved draft
+		const savedDraft = JSON.parse(localStorage.getItem('draft'));
+		if (savedDraft) {
+			document.getElementById('content-score').value = savedDraft.contentScore;
+			document.getElementById('content-comments').value = savedDraft.contentComments;
+			document.getElementById('delivery-score').value = savedDraft.deliveryScore;
+			document.getElementById('delivery-comments').value = savedDraft.deliveryComments;
+			document.getElementById('visuals-score').value = savedDraft.visualsScore;
+			document.getElementById('visuals-comments').value = savedDraft.visualsComments;
+		}
+
+		// Submit evaluation functionality
+		submitBtn.addEventListener('click', () => {
+			const contentScore = document.getElementById('content-score').value;
+			const contentComments = document.getElementById('content-comments').value;
+			const deliveryScore = document.getElementById('delivery-score').value;
+			const deliveryComments = document.getElementById('delivery-comments').value;
+			const visualsScore = document.getElementById('visuals-score').value;
+			const visualsComments = document.getElementById('visuals-comments').value;
+			let emptyFields = [];
+			if (!contentScore) {
+				emptyFields.push('Content Score');
+			}
+			if (!contentComments) {
+				emptyFields.push('Content Comments');
+			}
+			if (!deliveryScore) {
+				emptyFields.push('Delivery Score');
+			}
+			if (!deliveryComments) {
+				emptyFields.push('Delivery Comments');
+			}
+			if (!visualsScore) {
+				emptyFields.push('Visuals Score');
+			}
+			if (!visualsComments) {
+				emptyFields.push('Visuals Comments');
+			}
+			if (emptyFields.length > 0) {
+				const liveToast = document.getElementById('liveToast');
+				const toastBody = liveToast.querySelector('.toast-body');
+				toastBody.innerText = `Please fill in the following fields: ${emptyFields.join(', ')}`;
+				const toast = new bootstrap.Toast(liveToast);
+				toast.show();
+			}
+			if (contentScore && deliveryScore && visualsScore) {
+				const averageScore = (parseInt(contentScore) + parseInt(deliveryScore) + parseInt(visualsScore)) / 3;
+				resultsText.innerText = `Average Score: ${averageScore}\nContent Comments: ${contentComments || 'Not provided'}\nDelivery Comments: ${deliveryComments || 'Not provided'}\nVisuals Comments: ${visualsComments || 'Not provided'}`;
+			} else {
+				resultsText.innerText = 'Not enough information to calculate average score.';
+			}
+			shareLink = `https://example.com/result?average=${contentScore && deliveryScore && visualsScore ? (parseInt(contentScore) + parseInt(deliveryScore) + parseInt(visualsScore)) / 3 : 'Not calculated'}&content=${contentComments || 'Not provided'}&delivery=${deliveryComments || 'Not provided'}&visuals=${visualsComments || 'Not provided'}`;
+			const submitModal = bootstrap.Modal.getInstance(document.getElementById('submit-modal'));
+			submitModal.hide();
+			document.getElementById('share-btn').style.display = 'block';
+			document.getElementById('print-btn').style.display = 'block';
+			evaluations.push({
+				averageScore: contentScore && deliveryScore && visualsScore ? (parseInt(contentScore) + parseInt(deliveryScore) + parseInt(visualsScore)) / 3 : 'Not calculated',
+				contentComments: contentComments || 'Not provided',
+				deliveryComments: deliveryComments || 'Not provided',
+				visualsComments: visualsComments || 'Not provided',
+				date: new Date().toISOString()
+			});
+			localStorage.setItem('evaluations', JSON.stringify(evaluations));
+			const liveToast = document.getElementById('liveToast');
+			const toastBody = liveToast.querySelector('.toast-body');
+			toastBody.innerText = 'Evaluation submitted successfully';
+			const toast = new bootstrap.Toast(liveToast);
+			toast.show();
+			updateEvaluationHistory();
+		});
+
+		// Share results functionality
+		shareBtn.addEventListener('click', () => {
+			navigator.clipboard.writeText(shareLink);
+			const liveToast = document.getElementById('liveToast');
+			const toastBody = liveToast.querySelector('.toast-body');
+			toastBody.innerText = 'Link copied to clipboard';
+			const toast = new bootstrap.Toast(liveToast);
+			toast.show();
+		});
+
+		// Print results functionality
+		printBtn.addEventListener('click', () => {
+			const results = document.getElementById('results');
+			const printWindow = window.open('', '', 'height=500,width=700');
+			printWindow.document.write(results.innerHTML);
+			printWindow.print();
+			printWindow.close();
+		});
+
+		// Filter evaluations functionality
+		filterEvaluationsBtn.addEventListener('click', () => {
+			const filterModal = document.getElementById('filter-modal');
+			filterModal.style.display = 'block';
+		});
+
+		// Delete evaluations functionality
+		deleteEvaluationsBtn.addEventListener('click', () => {
+			const deleteModal = document.getElementById('delete-modal');
+			deleteModal.style.display = 'block';
+		});
+
+		// Edit evaluations functionality
+		editEvaluationsBtn.addEventListener('click', () => {
+			const editModal = document.getElementById('edit-modal');
+			editModal.style.display = 'block';
+		});
+
+		// Update evaluation history
+		function updateEvaluationHistory() {
+			evaluationHistoryList.innerHTML = '';
+			evaluations.forEach(evaluation => {
+				const li = document.createElement('li');
+				li.textContent = `${evaluation.date} - Average Score: ${evaluation.averageScore}`;
+				evaluationHistoryList.appendChild(li);
+			});
+		}
+	</script>
+</body>
+
+</html>
